@@ -2,14 +2,26 @@ package br.com.bd2.usuario.dto;
 
 public class UsuarioDto {
     
-    private String profileName;
+    private String usuario;
 
-    public String getProfileName() {
-        return profileName;
+    private String senha;
+
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setProfileName(String profileName) {
-        this.profileName = profileName;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     
+
 }

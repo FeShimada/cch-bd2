@@ -19,6 +19,12 @@ public class GeneralException implements ExceptionMapper<Exception> {
             messageError.setMessage(exception.getMessage());
             return Response.status(Response.Status.BAD_REQUEST).entity(messageError).build();
         }
+
+        if(exception instanceof PermitionException) {
+            messageError.setMessage(exception.getMessage());
+            return Response.status(Response.Status.BAD_REQUEST).entity(messageError).build();
+        }
+
         messageError.setMessage("Erro não mapeado");
         return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(messageError).build();
     }
