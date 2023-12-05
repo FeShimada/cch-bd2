@@ -11,10 +11,8 @@ import br.com.bd2.fornecedor.orm.Fornecedor;
 import br.com.bd2.fornecedor.repository.FornecedorRepository;
 import br.com.bd2.produto.controller.ProdutoController;
 import br.com.bd2.produto.converter.ProdutoConverter;
-import br.com.bd2.usuario.orm.Usuario;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
-import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 
 @RequestScoped
