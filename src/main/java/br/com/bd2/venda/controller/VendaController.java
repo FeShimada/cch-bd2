@@ -92,4 +92,17 @@ public class VendaController {
         return vendaConverter.ormListToDtoList(vendaList);
     }
 
+    @Transactional
+    public boolean delete(UUID uuid) {
+        try {
+            Venda venda = vendaRepository.findById(uuid);
+            venda.getItemList().forEach(item -> itemController
+                    .delete(item.getIdItem()));
+            vendaRepository.delete(venda);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }

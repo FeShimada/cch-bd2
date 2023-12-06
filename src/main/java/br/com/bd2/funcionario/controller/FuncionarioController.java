@@ -63,4 +63,17 @@ public class FuncionarioController {
         return funcionarioDto;
     }
 
+    @Transactional
+    public boolean delete(UUID uuid) {
+        try {
+            Funcionario funcionario = funcionarioRepository.findById(uuid);
+            funcionario.getVendaList().forEach(venda -> vendaController
+                    .delete(venda.getIdVenda()));
+            funcionarioRepository.delete(funcionario);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }

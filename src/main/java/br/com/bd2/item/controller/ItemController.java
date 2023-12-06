@@ -63,4 +63,15 @@ public class ItemController {
         return itemConverter.ormListToDtoList(itemList);
     }
 
+    @Transactional
+    public boolean delete(UUID uuid) {
+        try {
+            Item item = itemRepository.findById(uuid);
+            itemRepository.delete(item);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }
