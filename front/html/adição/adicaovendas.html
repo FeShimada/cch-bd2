@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="eng">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../css/adicao/adicaovendas.css">
-        <link rel="icon" >
-        <title> Sistema de Vendas</title>
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="../../js/adicao/adicaovendas.js"></script>
-    </head>
-    <body>
-        <section class="conteudo">
-            <img class="iconadicionar" alt="icone adicionar" src="../../banco de imagens/adicionar.png"></a>
-            <h2>Cadastrar Venda<hr></h2>
 
-            <section class="formulario">
-                <form action="formulario" method="post">
-                <label for="id">ID:</label>
-                <input type="text" id="id" name="id" required>
-                <br>
-        
-                <label for="horven">Horário da Venda:</label>
-                <input type="datetime-local" id="horven" horven"nome" required>
-                <br>
-        
-                <label for="valortotal">Valor Total:</label>
-                <input type="text" id="valortotal" name="valortotaal" required>
-                <br>
-        
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/adicao/adicaovendas.css">
+    <link rel="icon">
+    <title> Sistema de Vendas</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../../js/adicao/adicaovendas.js"></script>
+</head>
+
+<body>
+    <section class="conteudo">
+        <img class="iconadicionar" alt="icone adicionar" src="../../banco de imagens/adicionar.png"></a>
+        <h2>Cadastrar Venda
+            <hr>
+        </h2>
+
+        <section class="formulario">
+            <form action="formulario" method="post">
+
                 <label for="idfunc">ID do Funcionário</label>
-                <input type="text" id="idfunc" name="idfuns" required>
+                <input type="text" id="idfunc" name="idfunc" required>
                 <br>
+
+                <div class="subForm">
+                    <div class="inputSubform">
+                        <label for="idProduto">ID do Produto</label>
+                        <input type="text" id="idProduto" name="idProduto">
+                        <br>
+                    </div>
+                    
+                    <div class="inputSubform">
+                        <label for="nrQuantidade">Quantidade</label>
+                        <input type="text" id="nrQuantidade" name="nrQuantidade">
+                        <br>
+                    </div>
+
+                    <div class="buttonContainer">
+                        <button class="button" type="button">Adicionar item</button>
+                    </div>
+                </div>
+
+                <section class="tabelaVendas">
+                    <h3>Itens<hr></h3>
+                    <table>
+                        <thead class="colunas">
+                            <tr>
+                                <th class="colmod">
+                                <th class="colid">ID PRODUTO</th>
+                                <th class="colnome">QUANTIDADE</th>
+                                <th class="colmod">
+                            </tr>
+                        </thead>
+                        <tbody class="linhas">
+        
+                        </tbody>
+                    </table>
+                </section>
 
                 <input class="botao" type="submit" value="Cadastrar Venda">
             </form>
 
-            </section>
         </section>
-    </body>
+    </section>
+</body>
+
 </html>

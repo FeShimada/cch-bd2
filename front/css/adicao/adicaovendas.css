@@ -1,7 +1,7 @@
 body {
     padding-top: 5%;
-    padding-right: 33%;
-    padding-left: 33%;
+    padding-right: 10%;
+    padding-left: 10%;
     background-color: #4D6882;
     font-family: Khula, sans-serif;
     font-size: 90%;
@@ -36,14 +36,66 @@ label {
     margin-bottom: 5px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 input {
     margin-bottom: 10px;
+    align-self: center;
 }
 
 hr {
     width: 100%;
 }
 
-.botao{
-    margin-left: 17%;
+
+.subForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.inputSubform{
+    margin-right: 50;
+}
+
+.buttonCointainer {
+    height: 10;
+    align-self: center;
+}
+.button {
+    align-self: center;
+}
+
+.tabelaVendas{
+    background-color: #BCD3E8;
+    font-size: 100%;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 600px;
+}
+h3{
+    padding: 2%;
+    color: #4D6882;
+}
+hr{
+    margin-bottom: 0.2%;
+}
+.tabelaVendas table {
+    background-color: #BCD3E8;
+    width: 100%;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+th{
+    color: #4D6882;
 }

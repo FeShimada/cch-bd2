@@ -1,7 +1,5 @@
 function adicionarFornecedor() {
     const apiUrl = 'http://localhost:8080/fornecedor';
-
-    const id = $('#id').val();
     const descricao = $('#descricao').val();
 
     $.ajax({
@@ -9,19 +7,16 @@ function adicionarFornecedor() {
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({
-            id: id,
-            dsFornecedor: descricao,
-            produtoList:
+            dsFornecedor: descricao
         }),
         success: function () {
-            
-            $('#id').val('');
             $('#descricao').val('');
-
-            window.parent.obterFornecedores();
+            alert('sucesso!')
+            window.history.back();
         },
         error: function (error) {
             console.error('Erro ao adicionar fornecedor:', error);
+            alert("ERRO!")
         }
     });
 }

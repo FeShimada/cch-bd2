@@ -15,7 +15,7 @@ function obterFornecedores() {
         data.forEach(function (fornecedor) {
             const newRow = `<tr>
                                 <td></td>
-                                <td>${fornecedor.id}</td>
+                                <td>${fornecedor.idFornecedor}</td>
                                 <td>${fornecedor.dsFornecedor}</td>
                                 <td></td>
                                 <td></td>
