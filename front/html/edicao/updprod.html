@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/edicao/updprod.css">
+        <link rel="icon" >
+        <title> Sistema de Vendas</title>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="../../js/edicao/updprod.js"></script>
+    </head>
+    <body>
+        <section class="conteudo">
+            <img class="iconeditar" alt="icone editar" src="../../banco de imagens/editar.png"></a>
+            <h2>Atualizar Produtos<hr></h2>
+
+            <section class="formulario">
+                <form action="formulario" method="post">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" required>
+                <br>
+        
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" required>
+                <br>
+        
+                <label for="Valor">Valor:</label>
+                <input type="text" id="valor" name="valor" required>
+                <br>
+        
+                <label for="qntd">Quantidade:</label>
+                <input type="text" id="qntd" name="qntd" required>
+                <br>
+        
+                <label for="idforn">ID do Fornecedor:</label>
+                <input type="password" id="idforn" name="idforn" required>
+                <br>
+        
+                <input class="botao" type="submit" value="Atualizar Produto">
+            </form>
+
+            </section>
+        </section>
+    </body>
+</html>
