@@ -22,6 +22,15 @@ function obterFornecedores() {
                             </tr>`;
             $('.linhas').append(newRow);
         });
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        if (jqXHR.status === 403) {
+            const errorMessage = jqXHR.responseJSON.message;
+            
+            alert('Erro 403: ' + errorMessage);
+        } else {
+            alert('Erro ao obter fornecedores. Status: ' + jqXHR.status);
+        }
     });
 }
 

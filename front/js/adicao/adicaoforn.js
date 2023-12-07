@@ -15,8 +15,11 @@ function adicionarFornecedor() {
             window.history.back();
         },
         error: function (error) {
-            console.error('Erro ao adicionar fornecedor:', error);
-            alert("ERRO!")
+            if (error.responseJSON && error.responseJSON.message) {
+                alert('Erro: ' + error.responseJSON.message);
+            } else {
+                alert('Erro desconhecido.');
+            }
         }
     });
 }

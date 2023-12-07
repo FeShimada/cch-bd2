@@ -16,8 +16,12 @@ $(document).ready(function () {
                     alert('Funcionário deletado com sucesso!');
                     window.history.back();
                 },
-                error: function () {
-                    alert('Erro ao deletado o funcionário. Verifique a console para mais detalhes.');
+                error: function (error) {
+                    if (error.responseJSON && error.responseJSON.message) {
+                        alert('Erro: ' + error.responseJSON.message);
+                    } else {
+                        alert('Erro desconhecido.');
+                    }
                 }
             });
         }

@@ -15,8 +15,12 @@ $(document).ready(function () {
                     alert('Fornecedor deletado com sucesso!');
                     window.history.back();
                 },
-                error: function () {
-                    alert('Erro ao deletar o fornecedor. Verifique a console para mais detalhes.');
+                error: function (error) {
+                    if (error.responseJSON && error.responseJSON.message) {
+                        alert('Erro: ' + error.responseJSON.message);
+                    } else {
+                        alert('Erro desconhecido.');
+                    }
                 }
             });
         } else {
